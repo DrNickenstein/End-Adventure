@@ -1,6 +1,10 @@
 package io.github.drnickenstein.endadventure.init;
 
+import java.util.function.Supplier;
+
 import io.github.drnickenstein.endadventure.EndAdventure;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -13,6 +17,17 @@ public class BlockInit {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, EndAdventure.MODID);
 	
 	
-	public static final RegistryObject<Block> FINISIUM_ORE = BLOCKS.register("finisium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
+	public static final RegistryObject<Block> FINISIUM_ORE = register("finisium_ore", () -> new Block(BlockBehaviour.Properties
+																								.of(Material.STONE)
+																								.requiresCorrectToolForDrops()), new Item.Properties());
+	
+	
+	private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> supplier, Item.Properties properties) {
+		
+		RegistryObject<T> block = BLOCKS.register(name, supplier);
+		ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(), properties));
+		return block;
+		
+	}
 	
 }

@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "endadventure:items/finisium_shard"
+        "layer0": "endadventure:item/finisium_shard"
     }
 }
