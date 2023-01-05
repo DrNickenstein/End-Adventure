@@ -1,8 +1,16 @@
 {
+	//Items
+
 	"item.endadventure.finisium_shard": "Finisium Shard",
 	
+	
+	//Swords
+	
+	"item.endadventure.finisium_sword": "Finisium Sword",
 	
 	//Blocks
 	
 	"block.endadventure.finisium_ore": "Finisium Ore"
+	
+	
 }

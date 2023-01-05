@@ -1,5 +1,12 @@
 {
+	//Oggetti
+
 	"item.endadventure.finisium_shard": "Scheggia di Finisio",
+	
+	
+	//Spade
+	
+	"item.endadventure.finisium_sword": "Spada di Finisio",
 	
 	
 	//Blocchi
