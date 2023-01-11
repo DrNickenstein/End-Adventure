@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "endadventure:item/finisium_sword_stage_5"
+    }
+}

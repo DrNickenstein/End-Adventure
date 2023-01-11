@@ -1,6 +1,55 @@
 {
-    "parent": "minecraft:item/generated",
+    "parent": "minecraft:item/handheld",
     "textures": {
         "layer0": "endadventure:item/finisium_sword"
-    }
+    },
+    
+    "overrides": [
+    
+    	{
+    		"predicate": {
+    		
+    			"endadventure:currentstage": 1
+    		},
+    	
+    		"model": "endadventure:item/finisium_sword_stage_1"
+    	},
+    	
+    	{
+    		"predicate": {
+    		
+    			"endadventure:currentstage": 2
+    		},
+    	
+    		"model": "endadventure:item/finisium_sword_stage_2"
+    	},
+    	
+    	{
+    		"predicate": {
+    		
+    			"endadventure:currentstage": 3
+    		},
+    	
+    		"model": "endadventure:item/finisium_sword_stage_3"
+    	},
+    	
+    	{
+    		"predicate": {
+    		
+    			"endadventure:currentstage": 4
+    		},
+    	
+    		"model": "endadventure:item/finisium_sword_stage_4"
+    	},
+    	
+    	{
+    		"predicate": {
+    		
+    			"endadventure:currentstage": 5
+    		},
+    	
+    		"model": "endadventure:item/finisium_sword_stage_5"
+    	}
+    
+    ]
 }
