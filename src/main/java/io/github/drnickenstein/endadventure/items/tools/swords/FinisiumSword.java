@@ -53,6 +53,8 @@ public class FinisiumSword extends SwordItem {
 		return true;
 	}
 	
+	
+	
 	public void updateSwordStage(ItemStack stack, int hits, int stage) {
 		
 		if(hits % 10 == 0) {
