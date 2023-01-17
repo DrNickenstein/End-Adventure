@@ -58,15 +58,13 @@ public class FinisiumSword extends SwordItem {
 	public void updateSwordStage(ItemStack stack, int hits, int stage) {
 		
 		if(hits % 10 == 0) {
-			
-			System.out.println("Stage update");
+
 			stack.getOrCreateTagElement("swordStage").putInt("stage", stage + 1);
 			
 		}
 		
 		if(hits == 0) {
-			
-			System.out.println("Stages reset");
+
 			stack.getOrCreateTagElement("swordStage").putInt("stage", 0);
 			
 		}
