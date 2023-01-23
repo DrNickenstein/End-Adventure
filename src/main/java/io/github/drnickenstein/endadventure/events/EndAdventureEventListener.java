@@ -1,7 +1,7 @@
 package io.github.drnickenstein.endadventure.events;
 
 import io.github.drnickenstein.endadventure.items.tools.swords.FinisiumSword;
-import io.github.drnickenstein.endadventure.networking.EndadventureMessages;
+import io.github.drnickenstein.endadventure.networking.EndAdventureMessages;
 import io.github.drnickenstein.endadventure.networking.packets.FinisiumSwordC2SPacket;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -18,7 +18,7 @@ public class EndAdventureEventListener {
 	@SubscribeEvent
 	public void miss(LeftClickEmpty event) {
 		
-			EndadventureMessages.sendToServer(new FinisiumSwordC2SPacket());
+			EndAdventureMessages.sendToServer(new FinisiumSwordC2SPacket());
 		
 	}
 	
@@ -40,7 +40,7 @@ public class EndAdventureEventListener {
 				ItemStack stack = event.getItemStack();
 				stack.getOrCreateTagElement("swordStage").putInt("hits", 0);
 
-				finisiumSword.updateSwordStage(stack, 0, 0);
+				finisiumSword.updateSwordStage(stack, 0, 0, event.getEntity());
 			
 			}
 		

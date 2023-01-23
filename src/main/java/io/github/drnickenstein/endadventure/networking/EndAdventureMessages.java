@@ -9,7 +9,7 @@ import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.simple.SimpleChannel;
 
-public class EndadventureMessages {
+public class EndAdventureMessages {
 	
 	public static SimpleChannel CHANNEL;
 	

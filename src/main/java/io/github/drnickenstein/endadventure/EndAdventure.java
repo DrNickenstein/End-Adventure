@@ -6,7 +6,7 @@ import io.github.drnickenstein.endadventure.init.BlockInit;
 import io.github.drnickenstein.endadventure.init.ItemInit;
 import io.github.drnickenstein.endadventure.init.SoundInit;
 import io.github.drnickenstein.endadventure.items.tools.swords.FinisiumSword;
-import io.github.drnickenstein.endadventure.networking.EndadventureMessages;
+import io.github.drnickenstein.endadventure.networking.EndAdventureMessages;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,7 +36,7 @@ public class EndAdventure {
 	
 	public void commonSetup(final FMLCommonSetupEvent event) {
 		
-		EndadventureMessages.register();
+		EndAdventureMessages.register();
 		
 	}
 	

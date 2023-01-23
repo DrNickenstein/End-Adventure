@@ -5,8 +5,10 @@ import java.util.List;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
+import io.github.drnickenstein.endadventure.init.SoundInit;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -14,6 +16,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.WaterAnimal;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
@@ -29,11 +32,11 @@ public class FinisiumSword extends SwordItem {
 	}
 	
 	@Override
-	public boolean hurtEnemy(ItemStack stack, LivingEntity entityTarget, LivingEntity entity) {
+	public boolean hurtEnemy(ItemStack stack, LivingEntity pTarget, LivingEntity pAttacker) {
 
-		super.hurtEnemy(stack, entityTarget, entity);
+		super.hurtEnemy(stack, pTarget, pAttacker);
 
-		if(!(entityTarget instanceof Animal) && !(entityTarget instanceof WaterAnimal)) {
+		if(!(pTarget instanceof Animal) && !(pTarget instanceof WaterAnimal)) {
 		
 			CompoundTag compoundTag = stack.getOrCreateTagElement("swordStage");
 		
@@ -44,7 +47,7 @@ public class FinisiumSword extends SwordItem {
 		
 			if(stage < 5) {
 		
-				updateSwordStage(stack, hits + 1, stage);
+				updateSwordStage(stack, hits + 1, stage, pAttacker);
 			
 			}
 		
@@ -53,13 +56,19 @@ public class FinisiumSword extends SwordItem {
 		return true;
 	}
 	
-	
-	
-	public void updateSwordStage(ItemStack stack, int hits, int stage) {
+	public void updateSwordStage(ItemStack stack, int hits, int stage, LivingEntity attacker) {
 		
 		if(hits % 10 == 0) {
 
 			stack.getOrCreateTagElement("swordStage").putInt("stage", stage + 1);
+			
+			if(attacker instanceof Player player) {
+				
+				player = (Player)attacker;
+				Level level = player.getLevel();
+				level.playSound(null, player.blockPosition(), SoundInit.FINISIUM_SWORD_STAGE_UPGRADE.get(), SoundSource.MASTER, 0.5f, 1.0f);
+				
+			}
 			
 		}
 		

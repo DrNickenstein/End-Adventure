@@ -47,7 +47,7 @@ public class FinisiumSwordC2SPacket {
 					ItemStack stack = player.getItemInHand(InteractionHand.MAIN_HAND);
 					stack.getOrCreateTagElement("swordStage").putInt("hits", 0);
 				
-					finisiumSword.updateSwordStage(stack, 0, 0);
+					finisiumSword.updateSwordStage(stack, 0, 0, player);
 				
 				}
 			
