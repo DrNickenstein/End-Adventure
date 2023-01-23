@@ -1,8 +1,10 @@
 package io.github.drnickenstein.endadventure;
 
 import io.github.drnickenstein.endadventure.events.EndAdventureEventListener;
+import io.github.drnickenstein.endadventure.init.BlockEntityInit;
 import io.github.drnickenstein.endadventure.init.BlockInit;
 import io.github.drnickenstein.endadventure.init.ItemInit;
+import io.github.drnickenstein.endadventure.init.SoundInit;
 import io.github.drnickenstein.endadventure.items.tools.swords.FinisiumSword;
 import io.github.drnickenstein.endadventure.networking.EndadventureMessages;
 import net.minecraft.client.renderer.item.ItemProperties;
@@ -25,6 +27,8 @@ public class EndAdventure {
 		
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
+		BlockEntityInit.BLOCK_ENTITIES.register(bus);
+		SoundInit.SOUNDS.register(bus);
 		MinecraftForge.EVENT_BUS.register(new EndAdventureEventListener());	
 		bus.addListener(this::clientSetup);
 		bus.addListener(this::commonSetup);

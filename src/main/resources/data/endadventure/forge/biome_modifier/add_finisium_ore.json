@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_end",
+  "features": ["endadventure:ore_finisium"],
+  "step": "underground_ores"
+}
