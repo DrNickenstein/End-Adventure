@@ -8,9 +8,17 @@
 	
 	"item.endadventure.finisium_sword": "Finisium Sword",
 	
+	
 	//Blocks
 	
-	"block.endadventure.finisium_ore": "Finisium Ore"
+	"block.endadventure.finisium_ore": "Finisium Ore",
+	"block.endadventure.bioluminescent_fungus_lit": "Lit Bioluminescent Fungus",
+	"block.endadventure.bioluminescent_fungus_unlit": "Unlit Bioluminescent Fungus",
+	
+	//Tooltips
+	
+	"tooltip.finisium_sword.stage": "Sword stage:",
+	"tooltip.finisium_sword.hits": "Consecutive hits:"
 	
 	
 }

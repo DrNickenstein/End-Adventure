@@ -1,5 +1,6 @@
 package io.github.drnickenstein.endadventure;
 
+import io.github.drnickenstein.endadventure.events.EACreativeModeTabs;
 import io.github.drnickenstein.endadventure.events.EndAdventureEventListener;
 import io.github.drnickenstein.endadventure.init.BlockEntityInit;
 import io.github.drnickenstein.endadventure.init.BlockInit;
@@ -30,6 +31,7 @@ public class EndAdventure {
 		BlockEntityInit.BLOCK_ENTITIES.register(bus);
 		SoundInit.SOUNDS.register(bus);
 		MinecraftForge.EVENT_BUS.register(new EndAdventureEventListener());	
+		bus.addListener(EACreativeModeTabs::registerTabs);
 		bus.addListener(this::clientSetup);
 		bus.addListener(this::commonSetup);
 	}

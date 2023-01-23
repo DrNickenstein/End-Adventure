@@ -11,5 +11,12 @@
 	
 	//Blocchi
 	
-	"block.endadventure.finisium_ore": "Finisio Grezzo"
+	"block.endadventure.finisium_ore": "Finisio Grezzo",
+	"block.endadventure.bioluminescent_fungus_lit": "Fungo Bioluminescente Acceso",
+	"block.endadventure.bioluminescent_fungus_unlit": "Fungo Bioluminescente Spento",
+	
+	//Tooltips
+	
+	"tooltip.finisium_sword.stage": "Stadio della spada:",
+	"tooltip.finisium_sword.hits": "Colpi consecutivi:"
 }
