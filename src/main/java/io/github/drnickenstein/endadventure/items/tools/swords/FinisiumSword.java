@@ -115,6 +115,8 @@ public class FinisiumSword extends SwordItem {
 		    super.appendHoverText(stack, p_41422_, tooltip, p_41424_);
 	}
 	
+	
+	
 	public float getStageAsFloat(ItemStack stack) {
 		
 		if(stack.getItem() instanceof FinisiumSword) {

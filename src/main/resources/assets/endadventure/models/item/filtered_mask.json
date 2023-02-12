@@ -1,0 +1,51 @@
+{
+  "loader": "forge:separate_transforms",
+  "gui_light": "front",
+  "base": {
+  
+    "parent": "endadventure:item/filtered_mask_on_head"
+    
+  },
+  
+  "perspectives": {
+    "thirdperson_lefthand": {
+    
+      "parent": "endadventure:item/filtered_mask_in_hand"
+      
+    },
+    
+    "firstperson_lefthand": {
+    
+      "parent": "endadventure:item/filtered_mask_in_hand"
+      
+    },
+
+    "thirdperson_righthand": {
+    
+      "parent": "endadventure:item/filtered_mask_in_hand"
+      
+    },
+    
+    "firstperson_righthand": {
+    
+      "parent": "endadventure:item/filtered_mask_in_hand"
+      
+    },
+  
+    "gui": {
+    
+      "parent": "endadventure:item/filtered_mask_in_hand"
+      
+    },
+    "fixed": {
+    
+      "parent": "endadventure:item/filtered_mask_in_hand"
+      
+    },
+    "ground": {
+    
+      "parent": "endadventure:item/filtered_mask_in_hand"
+      
+    }
+  }
+}

@@ -2,6 +2,10 @@
 	//Oggetti
 
 	"item.endadventure.finisium_shard": "Scheggia di Finisio",
+	"item.endadventure.metal_syringe": "Siringa di Metallo",
+	"item.endadventure.endirium_metal_syringe": "Siringa di Endirio",
+	"item.endadventure.mask_filter": "Filtro da Maschera",
+	"item.endadventure.bioluminescent_fungus_sample": "Campione di Fungo Bioluminescente",
 	
 	
 	//Spade
@@ -15,8 +19,18 @@
 	"block.endadventure.bioluminescent_fungus_lit": "Fungo Bioluminescente Acceso",
 	"block.endadventure.bioluminescent_fungus_unlit": "Fungo Bioluminescente Spento",
 	
-	//Tooltips
+	
+	//Note
 	
 	"tooltip.finisium_sword.stage": "Stadio della spada:",
-	"tooltip.finisium_sword.hits": "Colpi consecutivi:"
+	"tooltip.finisium_sword.hits": "Colpi consecutivi:",
+	"tooltip.metal_syringe.endirium": "L'Endirio è l'essenza vitale delle creature dell'End",
+	"tooltip.filtered_mask.protection": "Utile per filtrare particelle nell'aria come spore",
+	
+	
+	//Oggetti indossabili
+	
+	"item.endadventure.filtered_mask": "Maschera Filtrante"
+	
+	
 }

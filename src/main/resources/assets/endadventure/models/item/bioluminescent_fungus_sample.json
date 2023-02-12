@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "endadventure:item/bioluminescent_fungus_sample"
+    }
+}

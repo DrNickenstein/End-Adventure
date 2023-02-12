@@ -14,5 +14,8 @@ public class SoundInit {
 	
 	public static final RegistryObject<SoundEvent> FINISIUM_SWORD_STAGE_UPGRADE = SOUNDS.register("finisium_sword_stage_upgrade", 
 																				  () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(EndAdventure.MODID, "finisium_sword_stage_upgrade")));
+	
+	public static final RegistryObject<SoundEvent> SYRINGE_INJECTION = SOUNDS.register("syringe_injection",
+																				  () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(EndAdventure.MODID, "syringe_injection")));
 
 }

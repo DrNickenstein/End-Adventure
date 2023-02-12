@@ -2,6 +2,10 @@
 	//Items
 
 	"item.endadventure.finisium_shard": "Finisium Shard",
+	"item.endadventure.metal_syringe": "Metal Syringe",
+	"item.endadventure.endirium_metal_syringe": "Endirium Metal Syringe",
+	"item.endadventure.mask_filter": "Mask Filter",
+	"item.endadventure.bioluminescent_fungus_sample": "Bioluminescent Fungus Sample",
 	
 	
 	//Swords
@@ -15,10 +19,18 @@
 	"block.endadventure.bioluminescent_fungus_lit": "Lit Bioluminescent Fungus",
 	"block.endadventure.bioluminescent_fungus_unlit": "Unlit Bioluminescent Fungus",
 	
+	
 	//Tooltips
 	
 	"tooltip.finisium_sword.stage": "Sword stage:",
-	"tooltip.finisium_sword.hits": "Consecutive hits:"
+	"tooltip.finisium_sword.hits": "Consecutive hits:",
+	"tooltip.metal_syringe.endirium": "Endirium is the vital essence of the End creatures",
+	"tooltip.filtered_mask.protection": "Useful to filter ambient particles like spores",
+	
+	
+	//Wearables
+	
+	"item.endadventure.filtered_mask": "Filtered Mask"
 	
 	
 }

@@ -1,5 +1,12 @@
 {
   "finisium_sword_stage_upgrade": {
     "sounds": [ "endadventure:finisium_sword_stage_upgrade" ]
+   
+  },
+  
+  "syringe_injection": {
+  	"sounds": [ "endadventure:syringe_injection"]
+  
   }
+  
 }
