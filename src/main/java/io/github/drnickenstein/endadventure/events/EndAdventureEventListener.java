@@ -19,9 +19,9 @@ public class EndAdventureEventListener {
 	public void miss(LeftClickEmpty event) {
 		
 			EndAdventureMessages.sendToServer(new FinisiumSwordC2SPacket());
-		
+
 	}
-	
+
 	
 	//Fired when a block is hit
 	
