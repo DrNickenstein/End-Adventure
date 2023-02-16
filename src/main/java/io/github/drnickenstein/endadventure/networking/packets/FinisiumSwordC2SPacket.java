@@ -3,6 +3,7 @@ package io.github.drnickenstein.endadventure.networking.packets;
 import java.util.function.Supplier;
 
 import io.github.drnickenstein.endadventure.items.tools.swords.FinisiumSword;
+import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -35,9 +36,7 @@ public class FinisiumSwordC2SPacket {
 		NetworkEvent.Context context = supplier.get();
 		
 		context.enqueueWork(() -> {
-			
-			
-			
+
 			ServerPlayer player = context.getSender();
 			Item item = player.getItemInHand(InteractionHand.MAIN_HAND).getItem();
 			

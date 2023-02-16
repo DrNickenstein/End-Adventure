@@ -23,15 +23,15 @@ public class BioluminescentFungusBlockEntity extends BlockEntity {
 		BlockPos pos = this.getBlockPos();
 		BlockState state = this.getBlockState();
 		AABB boundingBox = new AABB(this.getBlockPos()).inflate(5.0D);
-		
+
 		if(!(level.getEntitiesOfClass(Player.class, boundingBox).isEmpty())) {
 
 			level.setBlock(pos, BlockInit.BIOLUMINESCENT_FUNGUS_LIT.get().defaultBlockState(), 2);
-			
+
 		} else if(state == BlockInit.BIOLUMINESCENT_FUNGUS_LIT.get().defaultBlockState()) {
 
 			level.setBlock(pos, BlockInit.BIOLUMINESCENT_FUNGUS_UNLIT.get().defaultBlockState(), 2);
-			
+
 		}
     	
     }

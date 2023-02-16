@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 import io.github.drnickenstein.endadventure.EndAdventure;
 import io.github.drnickenstein.endadventure.blocks.BioluminescentFungus;
+import io.github.drnickenstein.endadventure.blocks.ToxicFungus;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -37,6 +38,10 @@ public class BlockInit {
 																								.lightLevel((p_187431_) -> {
 																								      return 10;
 																								   })), new Item.Properties());
+
+	public static final RegistryObject<Block> TOXIC_FUNGUS = register("toxic_fungus", () -> new ToxicFungus(BlockBehaviour.Properties
+																				.of(Material.GRASS)
+																				.sound(SoundType.FUNGUS)), new Item.Properties());
 	
 	private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> supplier, Item.Properties properties) {
 		
