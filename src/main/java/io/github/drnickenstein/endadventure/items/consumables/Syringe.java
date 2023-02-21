@@ -89,7 +89,32 @@ public class Syringe extends Item {
 	@Override
 	public void initializeClient(Consumer<IClientItemExtensions> consumer) {
 	    consumer.accept(new IClientItemExtensions() {
-	    	
+
+			private static final HumanoidModel.ArmPose INJECTING = HumanoidModel.ArmPose.create("inject", true, (model, entity, arm) -> {
+
+				if(arm == HumanoidArm.RIGHT) {
+
+					model.leftArm.xRot = -89.7f;
+					model.leftArm.yRot = 44.2f;
+
+					model.rightArm.xRot = -88.9f;
+					model.rightArm.yRot = 43.5f;
+
+				}
+
+				if(arm == HumanoidArm.LEFT) {
+
+					model.leftArm.xRot = -89.5f;
+					model.leftArm.yRot = -43.1f;
+					model.leftArm.zRot = -1f;
+
+					model.rightArm.xRot = -89.7f;
+					model.rightArm.yRot = -44.2f;
+
+				}
+
+			});
+
 	        @Override
 	        public boolean applyForgeHandTransform(PoseStack poseStack, LocalPlayer player, HumanoidArm arm, ItemStack itemInHand, float partialTick, float equipProcess, float swingProcess) {
 	        	
@@ -127,31 +152,6 @@ public class Syringe extends Item {
 	        
 	        @Override
 	        public @Nullable ArmPose getArmPose(LivingEntity entityLiving, InteractionHand hand, ItemStack itemStack) {
-
-	        	final HumanoidModel.ArmPose INJECTING = HumanoidModel.ArmPose.create("inject", true, (model, entity, arm) -> {
-
-	        		if(arm == HumanoidArm.RIGHT) {
-	        			
-		        		model.leftArm.xRot = -89.7f;
-		        		model.leftArm.yRot = 44.2f;
-		        		
-		        		model.rightArm.xRot = -88.9f;
-		        		model.rightArm.yRot = 43.5f;
-	        			
-	        		}
-	        		
-	        		if(arm == HumanoidArm.LEFT) {
-	        			
-	        			model.leftArm.xRot = -89.5f;
-	        			model.leftArm.yRot = -43.1f;
-	        			model.leftArm.zRot = -1f;
-	        			
-	        			model.rightArm.xRot = -89.7f;
-						model.rightArm.yRot = -44.2f;
-	        			
-	        		}
-	        		
-	        	});
 	        	
 	        	if(entityLiving.getUseItem() == itemStack && entityLiving.isUsingItem()) {
 	        		

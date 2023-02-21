@@ -7,12 +7,15 @@ import io.github.drnickenstein.endadventure.items.tools.swords.FinisiumSword;
 import io.github.drnickenstein.endadventure.networking.EndAdventureMessages;
 import io.github.drnickenstein.endadventure.networking.packets.FinisiumSwordC2SPacket;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.client.event.RenderArmEvent;
 import net.minecraftforge.client.event.RenderHandEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.LeftClickBlock;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.LeftClickEmpty;
@@ -60,14 +63,15 @@ public class EndAdventureEventListener {
 
 		InteractionHand hand = event.getHand();
 		Minecraft minecraft = Minecraft.getInstance();
-		LocalPlayer player = minecraft.player;
-		ItemStack mainHandStack = minecraft.player.getMainHandItem();
+		AbstractClientPlayer player = minecraft.player;
+		Item mainHandItem = minecraft.player.getMainHandItem().getItem();
+		ItemStack offHandStack = event.getItemStack();
 		PlayerRenderer renderer = (PlayerRenderer)minecraft.getEntityRenderDispatcher().getRenderer(player);
 		PoseStack poseStack = event.getPoseStack();
 
 		if(hand == InteractionHand.OFF_HAND) {
 
-			if(event.getItemStack().isEmpty() && mainHandStack.getItem() instanceof Syringe) {
+			if(offHandStack.isEmpty() && mainHandItem instanceof Syringe) {
 
 				event.setCanceled(true);
 

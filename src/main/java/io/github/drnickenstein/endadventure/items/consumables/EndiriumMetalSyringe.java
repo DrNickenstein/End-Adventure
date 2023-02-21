@@ -1,5 +1,6 @@
 package io.github.drnickenstein.endadventure.items.consumables;
 
+import io.github.drnickenstein.endadventure.init.MobEffectInit;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -17,7 +18,7 @@ public class EndiriumMetalSyringe extends Syringe {
     @Override
     public void applySyringeEffects(ItemStack stack, Level level, LivingEntity livingEntity) {
 
-        livingEntity.removeEffect(MobEffects.POISON);
+        livingEntity.removeEffect(MobEffectInit.FUNGUS_POISONING.get());
         livingEntity.removeEffect(MobEffects.CONFUSION);
 
     }

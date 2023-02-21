@@ -2,7 +2,9 @@ package io.github.drnickenstein.endadventure.init;
 
 import io.github.drnickenstein.endadventure.EndAdventure;
 import io.github.drnickenstein.endadventure.blockentities.BioluminescentFungusBlockEntity;
+import io.github.drnickenstein.endadventure.blockentities.InvisiumOreBlockEntity;
 import io.github.drnickenstein.endadventure.blockentities.ToxicFungusBlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -20,5 +22,9 @@ public class BlockEntityInit {
 	public static final RegistryObject<BlockEntityType<ToxicFungusBlockEntity>> TOXIC_FUNGUS = BLOCK_ENTITIES
 																				.register("toxic_fungus", () -> BlockEntityType.Builder.of(ToxicFungusBlockEntity::new,
 																				BlockInit.TOXIC_FUNGUS.get()).build(null));
-	
+
+	public static final RegistryObject<BlockEntityType<InvisiumOreBlockEntity>> INVISIUM_ORE = BLOCK_ENTITIES
+																				.register("invisium_ore", () -> BlockEntityType.Builder.of(InvisiumOreBlockEntity::new,
+																				BlockInit.INVISIUM_ORE.get(),
+																				BlockInit.HIDDEN_INVISIUM_ORE.get()).build(null));
 }

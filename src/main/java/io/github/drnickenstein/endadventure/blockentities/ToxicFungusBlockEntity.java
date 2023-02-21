@@ -2,6 +2,7 @@ package io.github.drnickenstein.endadventure.blockentities;
 
 import io.github.drnickenstein.endadventure.init.BlockEntityInit;
 import io.github.drnickenstein.endadventure.init.EntityTypeInit;
+import io.github.drnickenstein.endadventure.init.MobEffectInit;
 import io.github.drnickenstein.endadventure.items.wearables.FilteredMask;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -29,11 +30,7 @@ public class ToxicFungusBlockEntity extends BlockEntity {
 
     public void tick() {
 
-        System.out.println("call");
-
         Level level = this.level;
-        BlockPos pos = this.getBlockPos();
-        BlockState state = this.getBlockState();
         AABB boundingBox = new AABB(this.getBlockPos()).inflate(10.0D);
 
         List<LivingEntity> entities = level.getEntitiesOfClass(LivingEntity.class, boundingBox);
@@ -48,7 +45,7 @@ public class ToxicFungusBlockEntity extends BlockEntity {
 
                 if (!(endAdventureEntities.contains(entity)) && !(entity instanceof Player)) {
 
-                    entity.addEffect(new MobEffectInstance(MobEffects.POISON));
+                    entity.addEffect(new MobEffectInstance(MobEffectInit.FUNGUS_POISONING.get()));
 
                 }
 
@@ -58,7 +55,8 @@ public class ToxicFungusBlockEntity extends BlockEntity {
 
                     if(!(player.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof FilteredMask)) {
 
-                        player.addEffect(new MobEffectInstance(MobEffects.POISON));
+                        player.addEffect(new MobEffectInstance(MobEffectInit.FUNGUS_POISONING.get(), 72000));
+                        player.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 400));
 
                     }
 

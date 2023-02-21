@@ -31,7 +31,18 @@
 	
 	//Wearables
 	
-	"item.endadventure.filtered_mask": "Filtered Mask"
+	"item.endadventure.filtered_mask": "Filtered Mask",
+
+
+	//Death causes
+
+	"death.attack.fungusPoisoning": "%1$s died by fungus poisoning",
+	"death.attack.fungusPoisoning.player": "%1$s thought it was a good idea to breathe alien spores",
+
+
+	//Mob effects
+
+	"effect.endadventure.fungus_poisoning": "Fungus Poisoning"
 	
 	
 }

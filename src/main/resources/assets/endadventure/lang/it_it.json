@@ -31,7 +31,17 @@
 	
 	//Oggetti indossabili
 	
-	"item.endadventure.filtered_mask": "Maschera Filtrante"
-	
+	"item.endadventure.filtered_mask": "Maschera Filtrante",
+
+
+	//Cause di morte
+
+	"death.attack.fungusPoisoning": "%1$s è morto per avvelenamento da funghi",
+	"death.attack.fungusPoisoning.player": "%1$s pensava fosse una buona idea respirare spore aliene",
+
+
+	//Effetti
+
+	"effect.endadventure.fungus_poisoning": "Avvelenamento da fungo"
 	
 }
