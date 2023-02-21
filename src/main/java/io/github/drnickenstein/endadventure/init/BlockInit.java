@@ -50,14 +50,14 @@ public class BlockInit {
 
 	public static final RegistryObject<Block> WALL_FINISIUM_TORCH = BLOCKS.register("wall_finisium_torch", () -> new WallTorchBlock(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().instabreak().lightLevel((lightEmission) -> {
 		return 21;
-	}).sound(SoundType.WOOD), ParticleTypes.FLAME));
+	}).sound(SoundType.WOOD).noOcclusion(), ParticleTypes.FLAME));
 
 	public static final RegistryObject<Block> FINISIUM_TORCH = BLOCKS.register("finisium_torch", () -> new TorchBlock(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().instabreak().lightLevel((lightEmission) -> {
 		return 21;
-	}).sound(SoundType.WOOD), ParticleTypes.FLAME));
+	}).sound(SoundType.WOOD).noOcclusion(), ParticleTypes.FLAME));
 
 	public static final RegistryObject<Item> FINISIUM_TORCH_ITEM = SPECIAL_BLOCK_ITEMS.register("finisium_torch", () -> new StandingAndWallBlockItem(ForgeRegistries.BLOCKS.getValue(new ResourceLocation(EndAdventure.MODID, "finisium_torch")),
-																																							 ForgeRegistries.BLOCKS.getValue(new ResourceLocation(EndAdventure.MODID, "wall_finisium_torch")), new Item.Properties(), Direction.EAST));
+																																							 ForgeRegistries.BLOCKS.getValue(new ResourceLocation(EndAdventure.MODID, "wall_finisium_torch")), new Item.Properties(), Direction.DOWN));
 
 	
 	//Echoing forest blocks

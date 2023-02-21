@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "endadenture:block/finisium_wall_torch"
+      "model": "endadventure:block/wall_finisium_torch"
     },
     "facing=north": {
-      "model": "endadenture:block/finisium_wall_torch",
+      "model": "endadventure:block/wall_finisium_torch",
       "y": 270
     },
     "facing=south": {
-      "model": "endadenture:block/finisium_wall_torch",
+      "model": "endadventure:block/wall_finisium_torch",
       "y": 90
     },
     "facing=west": {
-      "model": "endadenture:block/finisium_wall_torch",
+      "model": "endadventure:block/wall_finisium_torch",
       "y": 180
     }
   }

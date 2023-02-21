@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_torch",
-  "render_type": "minecraft:cutout",
+  "render_type": "minecraft:cutout_mipped",
   "textures": {
     "torch": "endadventure:block/finisium_torch"
   }
