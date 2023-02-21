@@ -11,11 +11,9 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.StandingAndWallBlockItem;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.TorchBlock;
-import net.minecraft.world.level.block.WallTorchBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.registries.DeferredRegister;
@@ -48,13 +46,11 @@ public class BlockInit {
 																								.requiresCorrectToolForDrops()
 																								.strength(3.5F, 9.0F)), new Item.Properties());
 
-	public static final RegistryObject<Block> WALL_FINISIUM_TORCH = BLOCKS.register("wall_finisium_torch", () -> new WallTorchBlock(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().instabreak().lightLevel((lightEmission) -> {
-		return 21;
-	}).sound(SoundType.WOOD).noOcclusion(), ParticleTypes.FLAME));
+	public static final RegistryObject<Block> WALL_FINISIUM_TORCH = BLOCKS.register("wall_finisium_torch", () -> new WallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH)
+	, ParticleTypes.FLAME));
 
-	public static final RegistryObject<Block> FINISIUM_TORCH = BLOCKS.register("finisium_torch", () -> new TorchBlock(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().instabreak().lightLevel((lightEmission) -> {
-		return 21;
-	}).sound(SoundType.WOOD).noOcclusion(), ParticleTypes.FLAME));
+	public static final RegistryObject<Block> FINISIUM_TORCH = BLOCKS.register("finisium_torch", () -> new TorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH)
+	, ParticleTypes.FLAME));
 
 	public static final RegistryObject<Item> FINISIUM_TORCH_ITEM = SPECIAL_BLOCK_ITEMS.register("finisium_torch", () -> new StandingAndWallBlockItem(ForgeRegistries.BLOCKS.getValue(new ResourceLocation(EndAdventure.MODID, "finisium_torch")),
 																																							 ForgeRegistries.BLOCKS.getValue(new ResourceLocation(EndAdventure.MODID, "wall_finisium_torch")), new Item.Properties(), Direction.DOWN));
