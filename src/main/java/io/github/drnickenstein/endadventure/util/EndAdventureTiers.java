@@ -8,7 +8,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public enum EndAdventureTiers implements Tier {
 	
-	FINISIUM(5, 3000, 10.0F, 6.0F, 15, () -> (Ingredient.of(ItemInit.FINISIUM_SHARD.get())));
+	FINISIUM(5, 3000, 10.0f, 6.0f, 15, () -> (Ingredient.of(ItemInit.FINISIUM_SHARD.get()))),
+	INVISIUM(6, 3000, 12.0f, 8.0f, 15, () -> (Ingredient.of(ItemInit.INVISIUM_GEM.get())));
 	
 	private final int level;
 	private final int durability;

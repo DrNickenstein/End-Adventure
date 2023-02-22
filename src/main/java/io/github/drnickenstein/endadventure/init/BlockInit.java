@@ -1,17 +1,12 @@
 package io.github.drnickenstein.endadventure.init;
 
-import java.util.function.Supplier;
-
 import io.github.drnickenstein.endadventure.EndAdventure;
-import io.github.drnickenstein.endadventure.blocks.BioluminescentFungus;
-import io.github.drnickenstein.endadventure.blocks.InvisiumOre;
-import io.github.drnickenstein.endadventure.blocks.ToxicFungus;
+import io.github.drnickenstein.endadventure.blocks.*;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -19,6 +14,8 @@ import net.minecraft.world.level.material.Material;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Supplier;
 
 public class BlockInit {
 
@@ -46,11 +43,9 @@ public class BlockInit {
 																								.requiresCorrectToolForDrops()
 																								.strength(3.5F, 9.0F)), new Item.Properties());
 
-	public static final RegistryObject<Block> WALL_FINISIUM_TORCH = BLOCKS.register("wall_finisium_torch", () -> new WallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH)
-	, ParticleTypes.FLAME));
+	public static final RegistryObject<Block> WALL_FINISIUM_TORCH = BLOCKS.register("wall_finisium_torch", () -> new EAWallTorch(ParticleTypes.FLAME));
 
-	public static final RegistryObject<Block> FINISIUM_TORCH = BLOCKS.register("finisium_torch", () -> new TorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH)
-	, ParticleTypes.FLAME));
+	public static final RegistryObject<Block> FINISIUM_TORCH = BLOCKS.register("finisium_torch", () -> new EATorch(ParticleTypes.FLAME));
 
 	public static final RegistryObject<Item> FINISIUM_TORCH_ITEM = SPECIAL_BLOCK_ITEMS.register("finisium_torch", () -> new StandingAndWallBlockItem(ForgeRegistries.BLOCKS.getValue(new ResourceLocation(EndAdventure.MODID, "finisium_torch")),
 																																							 ForgeRegistries.BLOCKS.getValue(new ResourceLocation(EndAdventure.MODID, "wall_finisium_torch")), new Item.Properties(), Direction.DOWN));

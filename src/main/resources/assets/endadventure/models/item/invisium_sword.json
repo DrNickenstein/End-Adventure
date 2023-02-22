@@ -1,0 +1,21 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+
+    "layer0": "endadventure:item/invisium_sword_unpowered"
+
+  },
+  "overrides": [
+    {
+
+      "predicate": {
+
+        "endadventure:currentstage": 1
+
+      },
+
+      "model": "endadventure:item/invisium_sword_powered"
+
+    }
+  ]
+}

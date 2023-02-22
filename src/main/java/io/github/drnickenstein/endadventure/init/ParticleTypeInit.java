@@ -20,15 +20,5 @@ public class ParticleTypeInit {
 
 
     public static final RegistryObject<SimpleParticleType> TOXIC_SPORES = PARTICLE_TYPES.register("toxic_spores", () -> new SimpleParticleType(false));
-
-
-    @OnlyIn(Dist.CLIENT)
-    @SubscribeEvent
-    public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
-
-        ParticleEngine particleEngine = Minecraft.getInstance().particleEngine;
-        particleEngine.register(ParticleTypeInit.TOXIC_SPORES.get(), ParticleToxicSpores.Provider::new);
-
-    }
-
+    public static final RegistryObject<SimpleParticleType> FINISIUM_FLAMES = PARTICLE_TYPES.register("finisium_flames", () -> new SimpleParticleType(false));
 }

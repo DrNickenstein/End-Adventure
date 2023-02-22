@@ -5,6 +5,7 @@ import io.github.drnickenstein.endadventure.events.EAParticleFactories;
 import io.github.drnickenstein.endadventure.events.EndAdventureEventListener;
 import io.github.drnickenstein.endadventure.init.*;
 import io.github.drnickenstein.endadventure.items.tools.swords.FinisiumSword;
+import io.github.drnickenstein.endadventure.items.tools.swords.InvisiumSword;
 import io.github.drnickenstein.endadventure.networking.EndAdventureMessages;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
@@ -62,9 +63,21 @@ public class EndAdventure {
 					
 				}
 				
-		        return 0.0F;
+		        return 0.0f;
 		        
 		      });
+
+			ItemProperties.register(ItemInit.INVISIUM_SWORD.get(), new ResourceLocation(MODID, "powered"), (stack, world, living, id) -> {
+
+				if(stack.getItem() instanceof InvisiumSword) {
+
+					return ((InvisiumSword)stack.getItem()).getPoweredStatus(stack);
+
+				}
+
+				return 0.0f;
+
+			});
 
 
 			

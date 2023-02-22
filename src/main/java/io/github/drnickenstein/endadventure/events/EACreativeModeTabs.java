@@ -1,6 +1,7 @@
 package io.github.drnickenstein.endadventure.events;
 
 import io.github.drnickenstein.endadventure.EndAdventure;
+import io.github.drnickenstein.endadventure.init.BlockInit;
 import io.github.drnickenstein.endadventure.init.ItemInit;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -33,6 +34,12 @@ public class EACreativeModeTabs {
 						
 						displayedItems.accept(item.get());
 						
+					}
+
+					for(final RegistryObject<Item> item : BlockInit.SPECIAL_BLOCK_ITEMS.getEntries()) {
+
+						displayedItems.accept(item.get());
+
 					}
 					
 				}				

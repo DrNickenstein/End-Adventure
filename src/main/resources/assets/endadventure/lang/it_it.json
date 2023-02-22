@@ -6,11 +6,13 @@
 	"item.endadventure.endirium_metal_syringe": "Siringa di Endirio",
 	"item.endadventure.mask_filter": "Filtro da Maschera",
 	"item.endadventure.bioluminescent_fungus_sample": "Campione di Fungo Bioluminescente",
+	"item.endadventure.invisium_gem": "Gemma di Invisio",
 	
 	
 	//Spade
 	
 	"item.endadventure.finisium_sword": "Spada di Finisio",
+	"item.endadventure.invisium_sword": "Spada di Invisio",
 	
 	
 	//Blocchi
@@ -20,7 +22,7 @@
 	"block.endadventure.bioluminescent_fungus_unlit": "Fungo Bioluminescente Spento",
 	"block.endadventure.toxic_fungus": "Fungo Tossico",
 	"block.endadventure.finisium_torch": "Torcia di Finisio",
-	"block.endadventure.invisium_ore": "Invisio Grezzo"
+	"block.endadventure.invisium_ore": "Invisio Grezzo",
 	
 	
 	//Note
