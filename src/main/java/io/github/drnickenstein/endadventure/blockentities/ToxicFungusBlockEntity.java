@@ -45,7 +45,7 @@ public class ToxicFungusBlockEntity extends BlockEntity {
 
                 if (!(endAdventureEntities.contains(entity)) && !(entity instanceof Player)) {
 
-                    entity.addEffect(new MobEffectInstance(MobEffectInit.FUNGUS_POISONING.get()));
+                    entity.addEffect(new MobEffectInstance(MobEffectInit.FUNGUS_POISONING.get(), 72000));
 
                 }
 

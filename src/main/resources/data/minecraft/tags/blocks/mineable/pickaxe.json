@@ -3,7 +3,9 @@
 	"replace": false,
 	"values": [
 	
-		"endadventure:finisium_ore"
+		"endadventure:finisium_ore",
+		"endadventure:invisium_ore",
+		"endadventure:hidden_invisium_ore"
 	
 	]
 }

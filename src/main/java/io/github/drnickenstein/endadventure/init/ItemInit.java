@@ -5,6 +5,7 @@ import io.github.drnickenstein.endadventure.items.consumables.EndiriumMetalSyrin
 import io.github.drnickenstein.endadventure.items.tools.swords.FinisiumSword;
 import io.github.drnickenstein.endadventure.items.tools.swords.InvisiumSword;
 import io.github.drnickenstein.endadventure.items.wearables.FilteredMask;
+import io.github.drnickenstein.endadventure.items.wearables.armour.InvisiumChestplate;
 import io.github.drnickenstein.endadventure.util.EndAdventureArmorMaterials;
 import io.github.drnickenstein.endadventure.util.EndAdventureTiers;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -42,7 +43,7 @@ public class ItemInit {
 	//Armour
 
 	public static final RegistryObject<Item> INVISIUM_HELMET = ITEMS.register("invisium_helmet", () -> new ArmorItem(EndAdventureArmorMaterials.INVISIUM, EquipmentSlot.HEAD, new Item.Properties()));
-	public static final RegistryObject<Item> INVISIUM_CHESTPLATE = ITEMS.register("invisium_chestplate", () -> new ArmorItem(EndAdventureArmorMaterials.INVISIUM, EquipmentSlot.CHEST, new Item.Properties()));
+	public static final RegistryObject<Item> INVISIUM_CHESTPLATE = ITEMS.register("invisium_chestplate", () -> new InvisiumChestplate(EndAdventureArmorMaterials.INVISIUM, EquipmentSlot.CHEST, new Item.Properties()));
 	public static final RegistryObject<Item> INVISIUM_LEGGINGS = ITEMS.register("invisium_leggings", () -> new ArmorItem(EndAdventureArmorMaterials.INVISIUM, EquipmentSlot.LEGS, new Item.Properties()));
 	public static final RegistryObject<Item> INVISIUM_BOOTS = ITEMS.register("invisium_boots", () -> new ArmorItem(EndAdventureArmorMaterials.INVISIUM, EquipmentSlot.FEET, new Item.Properties()));
 

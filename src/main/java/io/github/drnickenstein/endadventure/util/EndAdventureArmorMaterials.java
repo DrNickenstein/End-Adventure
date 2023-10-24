@@ -1,5 +1,6 @@
 package io.github.drnickenstein.endadventure.util;
 
+import io.github.drnickenstein.endadventure.EndAdventure;
 import io.github.drnickenstein.endadventure.init.ItemInit;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -66,7 +67,7 @@ public enum EndAdventureArmorMaterials implements ArmorMaterial {
 
     public String getName() {
 
-        return this.name;
+        return EndAdventure.MODID + ":" + this.name;
 
     }
 

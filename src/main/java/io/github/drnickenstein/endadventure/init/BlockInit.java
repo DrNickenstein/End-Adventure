@@ -28,12 +28,12 @@ public class BlockInit {
 	public static final RegistryObject<Block> INVISIUM_ORE = register("invisium_ore", () -> new InvisiumOre(BlockBehaviour.Properties
 																								.of(Material.STONE)
 																								.requiresCorrectToolForDrops()
-																								.strength(3.5f, 9.0f)), new Item.Properties());
+																								.strength(3.5F, 9.0f)), new Item.Properties());
 
 	public static final RegistryObject<Block> HIDDEN_INVISIUM_ORE = BLOCKS.register("hidden_invisium_ore", () -> new InvisiumOre(BlockBehaviour.Properties
 																								.of(Material.STONE)
 																								.requiresCorrectToolForDrops()
-																								.strength(3.0f, 9.0f)));
+																								.strength(3.0F, 9.0f)));
 
 
 	//Finisium

@@ -13,7 +13,13 @@
 	
 	"item.endadventure.finisium_sword": "Spada di Finisio",
 	"item.endadventure.invisium_sword": "Spada di Invisio",
-	
+
+	//Armature
+
+	"item.endadventure.invisium_helmet": "Elmo di Invisio",
+	"item.endadventure.invisium_chestplate": "Corazza di Invisio",
+	"item.endadventure.invisium_leggings": "Gambiera di Invisio",
+	"item.endadventure.invisium_boots": "Stivali di Invisio",
 	
 	//Blocchi
 	

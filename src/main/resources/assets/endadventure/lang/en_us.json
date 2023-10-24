@@ -13,6 +13,13 @@
 	
 	"item.endadventure.finisium_sword": "Finisium Sword",
 	"item.endadventure.invisium_sword": "Invisium Sword",
+
+	//Armors
+
+	"item.endadventure.invisium_helmet": "Invisium Helmet",
+	"item.endadventure.invisium_chestplate": "Invisium Chestplate",
+	"item.endadventure.invisium_leggings": "Invisium Leggings",
+	"item.endadventure.invisium_boots": "Invisium Boots",
 	
 	
 	//Blocks
