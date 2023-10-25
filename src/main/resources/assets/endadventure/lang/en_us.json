@@ -36,8 +36,9 @@
 	
 	"tooltip.finisium_sword.stage": "Sword stage:",
 	"tooltip.finisium_sword.hits": "Consecutive hits:",
-	"tooltip.metal_syringe.endirium": "Endirium is the vital essence of the End creatures",
-	"tooltip.filtered_mask.protection": "Useful to filter ambient particles like spores",
+	"tooltip.metal_syringe.endirium": "\nEndirium is the vital essence of the End creatures",
+	"tooltip.metal_syringe.use": "\nCan be used on some End creatures",
+	"tooltip.filtered_mask.protection": "\nUseful to filter ambient particles like spores",
 	
 	
 	//Wearables

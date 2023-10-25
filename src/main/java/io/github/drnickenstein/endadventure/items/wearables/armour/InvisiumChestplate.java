@@ -12,7 +12,6 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -48,9 +47,9 @@ public class InvisiumChestplate extends ArmorItem {
 
             List<LivingEntity> entitiesInAABB = pLevel.getEntitiesOfClass(LivingEntity.class, boundingBox);
 
-            for(LivingEntity entity : entitiesInAABB) {
+            for (LivingEntity entity : entitiesInAABB) {
 
-                if(entity != player) {
+                if (entity != player) {
 
                     entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 20, 0, false, false));
 
@@ -61,4 +60,7 @@ public class InvisiumChestplate extends ArmorItem {
         }
 
     }
+
 }
+
+

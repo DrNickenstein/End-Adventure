@@ -35,8 +35,9 @@
 	
 	"tooltip.finisium_sword.stage": "Stadio della spada:",
 	"tooltip.finisium_sword.hits": "Colpi consecutivi:",
-	"tooltip.metal_syringe.endirium": "L'Endirio è l'essenza vitale delle creature dell'End",
-	"tooltip.filtered_mask.protection": "Utile per filtrare particelle nell'aria come spore",
+	"tooltip.metal_syringe.endirium": "\nL'Endirio è l'essenza vitale delle creature dell'End",
+	"tooltip.metal_syringe.use": "\nPuò essere usata su alcune creature dell'End",
+	"tooltip.filtered_mask.protection": "\nUtile per filtrare particelle nell'aria come spore",
 	
 	
 	//Oggetti indossabili

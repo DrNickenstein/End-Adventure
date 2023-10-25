@@ -2,6 +2,7 @@ package io.github.drnickenstein.endadventure.init;
 
 import io.github.drnickenstein.endadventure.EndAdventure;
 import io.github.drnickenstein.endadventure.items.consumables.EndiriumMetalSyringe;
+import io.github.drnickenstein.endadventure.items.misc.EmptySyringe;
 import io.github.drnickenstein.endadventure.items.tools.swords.FinisiumSword;
 import io.github.drnickenstein.endadventure.items.tools.swords.InvisiumSword;
 import io.github.drnickenstein.endadventure.items.wearables.FilteredMask;
@@ -49,7 +50,7 @@ public class ItemInit {
 
 	//Consumables
 	
-	public static final RegistryObject<Item> METAL_SYRINGE = ITEMS.register("metal_syringe", () -> new Item(new Item.Properties()));
+	public static final RegistryObject<Item> METAL_SYRINGE = ITEMS.register("metal_syringe", () -> new EmptySyringe(new Item.Properties()));
 	public static final RegistryObject<Item> ENDIRIUM_METAL_SYRINGE = ITEMS.register("endirium_metal_syringe", () -> new EndiriumMetalSyringe(new Item.Properties().stacksTo(1)));
 	
 	
